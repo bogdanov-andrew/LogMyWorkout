@@ -14,7 +14,9 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int MyButton=0x7f050000;
+        public static final int MyButton=0x7f050002;
+        public static final int button1=0x7f050000;
+        public static final int listView1=0x7f050001;
     }
     public static final class layout {
         public static final int exercises=0x7f030000;
