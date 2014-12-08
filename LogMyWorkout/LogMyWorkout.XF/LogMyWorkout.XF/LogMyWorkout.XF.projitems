@@ -10,7 +10,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExerciseEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FakeExercisesDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IExerciseDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IExerciseEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ExercisePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NavigationController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ExercisesPage.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>ExercisesPage.xaml</DependentUpon>

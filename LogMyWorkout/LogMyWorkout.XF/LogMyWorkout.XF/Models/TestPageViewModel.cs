@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Android.Content.Res;
 using Xamarin.Forms;
 
 namespace LogMyWorkout.XF
