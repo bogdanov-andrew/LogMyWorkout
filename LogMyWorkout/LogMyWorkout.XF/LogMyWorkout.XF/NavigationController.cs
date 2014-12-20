@@ -1,34 +1,43 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace LogMyWorkout.XF.Droid
+namespace LogMyWorkout.XF
 {
     public class NavigationController : INavigation
     {
+        private readonly NavigationPage _navigationPage;
+
+        public NavigationController(NavigationPage navigationPage)
+        {
+            _navigationPage = navigationPage;
+        }
+
         public Task PushAsync(Page page)
         {
-            throw new NotImplementedException();
+            return _navigationPage.PushAsync(page);
         }
 
         public Task<Page> PopAsync()
         {
-            throw new NotImplementedException();
+            return _navigationPage.PopAsync();
         }
 
         public Task PopToRootAsync()
         {
-            throw new NotImplementedException();
+            return _navigationPage.PopToRootAsync();
         }
 
         public Task PushModalAsync(Page page)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
         public Task<Page> PopModalAsync()
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
     }
 }

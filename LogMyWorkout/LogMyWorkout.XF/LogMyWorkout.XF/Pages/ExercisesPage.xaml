@@ -3,7 +3,7 @@
 					   	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 						xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
 					   	x:Class="LogMyWorkout.XF.ExercisesPage">
-    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+    <!--Grid HorizontalOptions="Center" VerticalOptions="Center">
     	<Grid.BindingContext>
     		<local:ExercisePageViewModel />
     	</Grid.BindingContext>
@@ -41,5 +41,5 @@
     	<StackLayout Orientation="Horizontal" Grid.Row="2">
     		<Button Text="Start" />
     	</StackLayout>
-    </Grid>
+    <Grid/-->
 </ContentPage>

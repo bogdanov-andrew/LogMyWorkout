@@ -2,9 +2,8 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using LogMyWorkout.XF.Droid.Annotations;
 
-namespace LogMyWorkout.XF.Droid.Models
+namespace LogMyWorkout.XF.Models
 {
     public class ExercisePageViewModel : INotifyPropertyChanged
     {
@@ -18,8 +17,6 @@ namespace LogMyWorkout.XF.Droid.Models
 
         public IExerciseEntity SelectedExerciseEntity { get; set; }
 
-
-
         private void InitExerciseList()
         {
             ExercisesList = _exerciseDataSource.GetAvaliableExercises();
@@ -32,7 +29,7 @@ namespace LogMyWorkout.XF.Droid.Models
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
+        //[NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
