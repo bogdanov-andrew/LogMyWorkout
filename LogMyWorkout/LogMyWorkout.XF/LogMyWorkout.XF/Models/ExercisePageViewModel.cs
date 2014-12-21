@@ -25,6 +25,8 @@ namespace LogMyWorkout.XF.Models
         public ExercisePageViewModel(IExerciseDataSource exerciseDataSource)
         {
             _exerciseDataSource = exerciseDataSource;
+
+            InitExerciseList();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

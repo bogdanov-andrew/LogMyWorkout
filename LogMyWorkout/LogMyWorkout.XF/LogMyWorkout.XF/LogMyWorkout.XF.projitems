@@ -19,17 +19,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NavigationController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\ExercisesPage.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>ExercisesPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ExercisesPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\SecondTestPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\TestPage.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ExercisesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

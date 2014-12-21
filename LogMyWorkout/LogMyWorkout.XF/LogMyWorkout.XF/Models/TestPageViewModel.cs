@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace LogMyWorkout.XF.Models
 {
-    public class TestPageViewModel : INotifyPropertyChanged
+    public class StartPageViewModel : INotifyPropertyChanged
     {
         private readonly INavigation _navigation;
         private readonly IPageFactory _pageFactory;
@@ -14,7 +14,7 @@ namespace LogMyWorkout.XF.Models
 
         public ICommand StartWorkout { protected set; get; }
 
-        public TestPageViewModel(INavigation navigation, IPageFactory pageFactory)
+        public StartPageViewModel(INavigation navigation, IPageFactory pageFactory)
         {
             _navigation = navigation;
             _pageFactory = pageFactory;
@@ -23,7 +23,7 @@ namespace LogMyWorkout.XF.Models
 
         private void StartWorkoutAction()
         {
-            Page page = _pageFactory.GetPageSecond();
+            Page page = _pageFactory.GetExercisesPage();
             _navigation.PushAsync(page);
         }
 

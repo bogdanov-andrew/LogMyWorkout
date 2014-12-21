@@ -12,11 +12,11 @@ namespace LogMyWorkout.XF
     {
         public static Page GetMainPage()
         {
-            var page = new TestPage();
+            var page = new StartPage();
             var navigationPage = new NavigationPage(page);
             var navigationController = new NavigationController(navigationPage);
             var pageFactory = new PageFactory();
-            page.BindingContext = new TestPageViewModel(navigationController, pageFactory);
+            page.BindingContext = new StartPageViewModel(navigationController, pageFactory);
             page.Init();
 
             //navigationPage.BindingContext = new TestPageViewModel(navigationPage);
