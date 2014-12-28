@@ -15,12 +15,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)IExerciseDataSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IExerciseEntity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IPageFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AddNewExercisePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ExercisePageViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\TestPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\StartPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NavigationController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ExercisesPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\SecondTestPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\TestPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\AddNewExercisePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\StartPage.cs" />
   </ItemGroup>
 </Project>

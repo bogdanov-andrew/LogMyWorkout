@@ -15,21 +15,11 @@ namespace LogMyWorkout.XF
             var page = new StartPage();
             var navigationPage = new NavigationPage(page);
             var navigationController = new NavigationController(navigationPage);
-            var pageFactory = new PageFactory();
+            var pageFactory = new PageFactory(navigationController);
             page.BindingContext = new StartPageViewModel(navigationController, pageFactory);
             page.Init();
 
-            //navigationPage.BindingContext = new TestPageViewModel(navigationPage);
-
             return navigationPage;
-            /*return new ContentPage
-            {
-                Content = new Label {B
-                    Text = "Hello, Forms !",
-                    VerticalOptions = LayoutOptions.CenterAndExpand,
-                    HorizontalOptions = LayoutOptions.CenterAndExpand,
-                },
-            };*/
         }
     }
 }

@@ -7,7 +7,7 @@ namespace LogMyWorkout.XF
 {
     public interface IPageFactory
     {
-        Page GetPageSecond();
+        Page GetAddNewExercisePage();
         Page GetExercisesPage();
     }
 }
