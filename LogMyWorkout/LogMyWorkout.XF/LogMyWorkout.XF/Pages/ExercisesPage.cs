@@ -15,30 +15,30 @@ namespace LogMyWorkout.XF.Pages
             {
                 RowDefinitions = new RowDefinitionCollection()
                 {
-                    new RowDefinition(){ Height = new GridLength(1, GridUnitType.Star)},
-                    new RowDefinition(){ Height = new GridLength(0, GridUnitType.Auto)},
-                    new RowDefinition(){ Height = new GridLength(10, GridUnitType.Star)},
+                    new RowDefinition(){ Height = new GridLength(5, GridUnitType.Star)},
+                    new RowDefinition(){ Height = new GridLength(60, GridUnitType.Star)},
+                    new RowDefinition(){ Height = new GridLength(10, GridUnitType.Auto)},
                 },
 
                 ColumnDefinitions = new ColumnDefinitionCollection()
                 {
-                    new ColumnDefinition() {Width = new GridLength(0,GridUnitType.Auto)}
+                    new ColumnDefinition() {Width = new GridLength(100,GridUnitType.Star)}
                 },
             };
 
             StackLayout topLayout = GenerateTop();
             Grid.SetColumn(topLayout, 0);
-            Grid.SetRow(topLayout, 1);
+            Grid.SetRow(topLayout, 0);
             grid.Children.Add(topLayout);
 
             ListView middleLayout = GenerateMiddlePart();
             Grid.SetColumn(middleLayout, 0);
-            Grid.SetRow(middleLayout, 2);
+            Grid.SetRow(middleLayout, 1);
             grid.Children.Add(middleLayout);
 
             StackLayout bottomLayout = GenerateBottom();
             Grid.SetColumn(bottomLayout, 0);
-            Grid.SetRow(bottomLayout, 3);
+            Grid.SetRow(bottomLayout, 2);
             grid.Children.Add(bottomLayout);
 
             Content = grid;

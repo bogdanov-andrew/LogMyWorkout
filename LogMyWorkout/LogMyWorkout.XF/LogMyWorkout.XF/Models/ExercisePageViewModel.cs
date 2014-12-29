@@ -54,7 +54,7 @@ namespace LogMyWorkout.XF.Models
         private void OnAddNewExercise()
         {
             Page page = _pageFactory.GetAddNewExercisePage();
-            _navigation.PushAsync(page);
+            _navigation.PushModalAsync(page);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

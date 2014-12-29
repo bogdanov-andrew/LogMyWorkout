@@ -8,36 +8,36 @@ namespace LogMyWorkout.XF
 {
     public class NavigationController : INavigation
     {
-        private readonly NavigationPage _navigationPage;
+        private readonly INavigation _navigation;
 
         public NavigationController(NavigationPage navigationPage)
         {
-            _navigationPage = navigationPage;
+            _navigation = navigationPage.Navigation;
         }
 
         public Task PushAsync(Page page)
         {
-            return _navigationPage.PushAsync(page);
+            return _navigation.PushAsync(page);
         }
 
         public Task<Page> PopAsync()
         {
-            return _navigationPage.PopAsync();
+            return _navigation.PopAsync();
         }
 
         public Task PopToRootAsync()
         {
-            return _navigationPage.PopToRootAsync();
+            return _navigation.PopToRootAsync();
         }
 
         public Task PushModalAsync(Page page)
         {
-            throw new NotSupportedException();
+            return _navigation.PushModalAsync(page);
         }
 
         public Task<Page> PopModalAsync()
         {
-            throw new NotSupportedException();
+            return _navigation.PopModalAsync();
         }
     }
 }

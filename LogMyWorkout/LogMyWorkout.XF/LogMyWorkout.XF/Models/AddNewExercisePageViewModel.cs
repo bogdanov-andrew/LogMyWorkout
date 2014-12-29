@@ -13,6 +13,19 @@ namespace LogMyWorkout.XF.Models
         public AddNewExercisePageViewModel(INavigation navigation)
         {
             _navigation = navigation;
+
+            OkCommand = new Command(OnOkClicked);
+            CancelCommand = new Command(OnCancelClicked);
+        }
+
+        private void OnCancelClicked()
+        {
+            _navigation.PopModalAsync();
+        }
+
+        private void OnOkClicked()
+        {
+            
         }
 
         public ICommand OkCommand { get; set; }

@@ -21,9 +21,9 @@ namespace LogMyWorkout.XF.Pages
 
                 RowDefinitions = new RowDefinitionCollection()
                 {
-                    new RowDefinition() {Height = new GridLength(10,GridUnitType.Star)},
-                    new RowDefinition() {Height = new GridLength(10, GridUnitType.Absolute)},
-                    //new RowDefinition() {Height = new GridLength(10, GridUnitType.Star)}
+                    new RowDefinition() {Height = new GridLength(30,GridUnitType.Absolute)},
+                    new RowDefinition() {Height = new GridLength(30, GridUnitType.Absolute)},
+                    new RowDefinition() {Height = new GridLength(60, GridUnitType.Auto)}
                 }
             };
 
@@ -32,22 +32,24 @@ namespace LogMyWorkout.XF.Pages
                 Text = "Name",
                 XAlign = TextAlignment.End
             };
-            PlaceToGrid(grid, 0, 1, exerciseNameLabel);
+            PlaceToGrid(grid, 0, 0, exerciseNameLabel);
 
             Entry exerciseNameEntry = new Entry();
             exerciseNameEntry.SetBinding(Entry.TextProperty, "ExerciseName");
-            PlaceToGrid(grid, 1, 1, exerciseNameEntry);
+            PlaceToGrid(grid, 1, 0, exerciseNameEntry);
 
             Button okButton = new Button()
             {
                 Text = "Ok",
-                Command = ((AddNewExercisePageViewModel)BindingContext).OkCommand
+                Command = ((AddNewExercisePageViewModel)BindingContext).OkCommand,
+                WidthRequest = 100
             };
 
             Button cancelButton = new Button()
             {
                 Text = "Cancel",
-                Command = ((AddNewExercisePageViewModel)BindingContext).CancelCommand
+                Command = ((AddNewExercisePageViewModel)BindingContext).CancelCommand,
+                WidthRequest = 100
             };
 
             StackLayout buttonLayout = new StackLayout()
@@ -56,7 +58,7 @@ namespace LogMyWorkout.XF.Pages
                 Children = { okButton, cancelButton }
             };
 
-            PlaceToGrid(grid, 1, 2, buttonLayout);
+            PlaceToGrid(grid, 1, 1, buttonLayout);
 
             Content = grid;
         }
