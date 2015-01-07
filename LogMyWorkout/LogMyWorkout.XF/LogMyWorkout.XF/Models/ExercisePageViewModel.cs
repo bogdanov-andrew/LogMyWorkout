@@ -39,6 +39,8 @@ namespace LogMyWorkout.XF.Models
             AddNewExercise = new Command(OnAddNewExercise);
             SearchExercise = new Command(OnSearchExercise);
             StartExercise = new Command(OnStartExercise);
+
+            MessagingCenter.Subscribe<AddNewExercisePageViewModel, IExerciseEntity>(this, MessagesList.NewExercise, OnNewExercise);
         }
 
         private void OnStartExercise()
@@ -55,6 +57,14 @@ namespace LogMyWorkout.XF.Models
         {
             Page page = _pageFactory.GetAddNewExercisePage();
             _navigation.PushModalAsync(page);
+
+        }
+
+        private void OnNewExercise(AddNewExercisePageViewModel addNewExercisePageViewModel, IExerciseEntity entity)
+        {
+            //todo add somewhere unsibscribing: MessagingCenter.Unsubscribe<AddNewExercisePageViewModel, IExerciseEntity>(this, MessagesList.NewExercise);
+            _exerciseDataSource.AddExercise(entity);
+            InitExerciseList();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

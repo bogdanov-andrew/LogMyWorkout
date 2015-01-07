@@ -7,5 +7,6 @@ namespace LogMyWorkout.XF
     public interface IExerciseDataSource
     {
         IList<IExerciseEntity> GetAvaliableExercises();
+        void AddExercise(IExerciseEntity entity);
     }
 }

@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)IExerciseDataSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IExerciseEntity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IPageFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessagesList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AddNewExercisePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ExercisePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StartPageViewModel.cs" />

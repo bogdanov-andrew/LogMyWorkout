@@ -25,7 +25,12 @@ namespace LogMyWorkout.XF.Models
 
         private void OnOkClicked()
         {
-            
+            IExerciseEntity exerciseEntity = new ExerciseEntity()
+            {
+                Name = ExerciseName
+            };
+            MessagingCenter.Send(this, MessagesList.NewExercise, exerciseEntity);
+            _navigation.PopModalAsync();
         }
 
         public ICommand OkCommand { get; set; }
